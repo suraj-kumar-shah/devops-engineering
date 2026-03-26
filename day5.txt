@@ -1,0 +1,7 @@
+Question: How to undo the last commit in Git?
+Answer: 
+git reset --soft HEAD~1
+git reset --hard HEAD~1
+git reset --mixed HEAD~1
+git revert HEAD
+git commit --amend -m "new message"
