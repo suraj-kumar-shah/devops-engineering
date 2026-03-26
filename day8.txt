@@ -1,0 +1,8 @@
+Question: How to create a custom Docker network?
+Answer: 
+docker network create my-network
+docker network ls
+docker network inspect my-network
+docker run --network my-network nginx
+docker network connect my-network container1
+docker network disconnect my-network container1
