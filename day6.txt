@@ -1,0 +1,8 @@
+Question: What is Docker volume and why use it?
+Answer: 
+docker volume create mydata
+docker run -v mydata:/app data
+docker run --mount source=mydata,target=/app
+docker volume ls
+docker volume inspect mydata
+docker volume rm mydata
