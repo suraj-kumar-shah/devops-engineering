@@ -1,0 +1,7 @@
+Question: What's the difference between git fetch and git pull?
+Answer: 
+git fetch origin
+git fetch --all
+git pull origin main
+git pull --rebase
+git diff origin/main
