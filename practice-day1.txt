@@ -1,0 +1,4 @@
+git init
+git add .
+git commit -m "commit the message"
+git push origin branch-name 
