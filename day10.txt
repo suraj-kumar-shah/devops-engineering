@@ -1,0 +1,9 @@
+Question: What is Docker Compose and its benefits?
+Answer: 
+docker-compose up
+docker-compose up -d
+docker-compose down
+docker-compose logs
+docker-compose ps
+docker-compose exec service bash
+docker-compose build
