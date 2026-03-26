@@ -1,0 +1,6 @@
+Question: What is the difference between Docker CMD and ENTRYPOINT?
+Answer: 
+CMD ["nginx", "-g", "daemon off;"]
+ENTRYPOINT ["python3"]
+CMD ["app.py"]
+docker run image python3 script.py

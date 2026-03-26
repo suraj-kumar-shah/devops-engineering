@@ -1,0 +1,7 @@
+Question: What is Docker multi-stage build?
+Answer: 
+FROM golang:1.19 AS builder
+RUN go build -o app
+FROM alpine:latest
+COPY --from=builder /app /app
+docker build -t myapp .

@@ -1,0 +1,6 @@
+Question: What is the difference between Git merge and Git rebase?
+Answer: 
+git merge feature-branch
+git rebase main
+git rebase --continue
+git rebase --abort
