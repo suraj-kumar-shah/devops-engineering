@@ -1,0 +1,7 @@
+Question: How to amend the last commit message?
+Answer: 
+git commit --amend -m "Updated message"
+git commit --amend --no-edit
+git add forgotten-file.txt
+git commit --amend
+git push --force-with-lease
