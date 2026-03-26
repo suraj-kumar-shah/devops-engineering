@@ -1,6 +1,0 @@
-Question: How to view commit history in a pretty format in Git?
-Answer: 
-git log --oneline --graph --decorate --all
-git log --pretty=format:"%h %s %an %ar"
-git log --since="2 days ago"
-git log --author="John"
