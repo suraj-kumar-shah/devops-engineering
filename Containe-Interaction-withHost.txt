@@ -1,0 +1,4 @@
+Execute a command inside a running contgainer 
+-> docker exec -it <container_id> 
+mkdir data 
+echo "Hello Docker

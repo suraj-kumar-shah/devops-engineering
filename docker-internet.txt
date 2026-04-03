@@ -1,0 +1,36 @@
+Create & Run Container
+docker run nginx
+docker run -d nginx
+docker run -it ubuntu bash
+docker run --name mycontainer nginx
+
+Port Mapping (Internet Access)
+docker run -p 8080:80 nginx
+docker run -p 127.0.0.1:8080:80 nginx
+docker run -P nginx
+
+List Containers
+docker ps
+docker ps -a
+
+Start / Stop / Restart
+docker start <id>
+docker start -d <id>
+docker stop <id>
+docker restart <id>
+
+Remove Container
+docker rm <id>
+docker rm -f <id>
+
+Execute Commands Inside Container
+docker exec -it <id> bash
+docker exec <id> ls
+
+Attach / Detach
+docker attach <id>
+# detach:
+Ctrl + P + Q
+
+Docker Networking (Internet)
+docker network ls
