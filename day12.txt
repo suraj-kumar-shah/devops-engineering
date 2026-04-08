@@ -2,3 +2,4 @@ docker volume create mydata
 docker volume ls  
 docker volume inspect mydat 
 docker run -dit --name mycontainer -v mydata:/app/data ubuntu
+docker exec -it mycontainer ls /app/data
