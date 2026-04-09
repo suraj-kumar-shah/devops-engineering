@@ -1,0 +1,12 @@
+#List network
+docker network ls 
+
+# Inspect bridge network 
+docker network inspect bridge 
+
+# Create custom bridge network 
+docker network create my_bridge_net
+
+#Run container in custom bridge 
+Docker run -d --name container1 --netwrrk my_bridge_net nginx
+docker run -d --namem con
