@@ -1,0 +1,50 @@
+1. docker stats
+Real-time resource usage for all running containers:
+bashdocker stats --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}"
+
+2. docker inspect
+Deep-dive JSON details about a container/image:
+bashdocker inspect --format='{{.NetworkSettings.IPAddress}}' <container>
+
+3. docker exec
+Run commands inside a running container:
+bashdocker exec -it <container> bash
+docker exec -u root <container> sh   # as root user
+
+4. docker build with BuildKit & secrets
+Faster builds with cache mounts and secret injection:
+bashDOCKER_BUILDKIT=1 docker build \
+  --secret id=mysecret,src=./secret.txt \
+  --cache-from myimage:latest \
+  -t myimage:latest .
+
+5. docker cp
+Copy files between host and container:
+bashdocker cp <container>:/app/logs ./local-logs
+docker cp ./config.yaml <container>:/app/config.yaml
+
+6. docker system prune
+Clean up unused images, containers, volumes, and networks:
+bashdocker system prune -af --volumes   # ⚠️ removes everything unused
+
+7. docker network
+Create isolated networks and connect containers:
+bashdocker network create --driver bridge my-net
+docker run --network my-net --name api myimage
+docker network inspect my-net
+
+8. docker commit
+Save a modified container as a new image:
+bashdocker commit --author "you" --message "added nginx config" <container> myimage:v2
+
+9. docker save / docker load
+Export and import images as tar archives (great for air-gapped systems):
+bashdocker save -o myimage.tar myimage:latest
+docker load -i myimage.tar
+
+10. docker buildx
+Multi-platform builds (e.g., build ARM image on x86):
+bashdocker buildx create --use
+docker buildx build \
+  --platform linux/amd64,linux/arm64 \
+  -t myimage:latest --push .
