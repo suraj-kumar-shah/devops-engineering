@@ -1,0 +1,49 @@
+🔹 1. Create a volume
+docker volume create my_volume
+
+Creates a new volume named my_volume.
+
+🔹 2. List all volumes
+docker volume ls
+
+Shows all available volumes.
+
+🔹 3. Inspect a volume
+docker volume inspect my_volume
+
+Gives detailed info (mount path, driver, etc.).
+
+🔹 4. Remove a volume
+docker volume rm my_volume
+
+Deletes a specific volume.
+
+🔹 5. Remove all unused volumes
+docker volume prune
+
+⚠️ Deletes all volumes not used by containers.
+
+🔹 6. Run container with volume
+docker run -d -v my_volume:/app nginx
+
+Mounts my_volume to /app inside container.
+
+🔹 7. Use named volume with --mount
+docker run -d --mount source=my_volume,target=/app nginx
+
+More modern and flexible way.
+
+🔹 8. Check container volumes
+docker inspect container_id
+
+Look under "Mounts" section.
+
+🔹 9. Backup a volume
+docker run --rm -v my_volume:/data -v $(pwd):/backup ubuntu tar cvf /backup/backup.tar /data
+
+Creates backup of volume data.
+
+🔹 10. Restore a volume
+docker run --rm -v my_volume:/data -v $(pwd):/backup ubuntu tar xvf /backup/backup.tar -C /
+
+Restores data into volume.
