@@ -1,0 +1,21 @@
+docker exec -it container_id bash
+docker exec -it container_id sh
+
+docker cp file.txt container_id:/app
+docker cp container_id:/app/file.txt .
+
+docker volume create myvol
+docker volume ls
+docker volume inspect myvol
+docker volume rm myvol
+
+docker network ls
+docker network create mynet
+docker network inspect mynet
+docker network rm mynet
+
+docker system prune           # remove unused data
+docker container prune        # remove stopped containers
+docker image prune            # remove unused images
+docker volume prune           # remove unused volumes
+
