@@ -7,7 +7,3 @@ using: ROM WORKDIR , COPY, RUN CMD , EXPOSE
 6. use named value
 7. demonstrate copy-on-write
 8. List and explain an image layer
-docker network create my-network
-
-
-docker run java-app
