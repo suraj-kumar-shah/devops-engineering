@@ -4,7 +4,7 @@ docker exec -it container_id sh
 docker cp file.txt container_id:/app
 docker cp container_id:/app/file.txt .
 
-docker volume create myvol
+docker volume create myvol slf
 docker volume ls
 docker volume inspect myvol
 docker volume rm myvol
